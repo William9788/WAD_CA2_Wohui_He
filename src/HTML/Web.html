@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="description" content="Web design projects">
+<meta name="author" content="Wohui He">
+<meta name="keywords" content="CodeClub Web Design projects">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Web Design Page</title>
+<link rel="stylesheet" href="../dist/output.css">
+</head>
+<body class="min-h-screen bg-cyan-300 py-8 font-sans">
+<div class="mx-auto max-w-6xl rounded-[3rem] border-4 border-dotted border-red-500 bg-lime-200 px-8 pb-10 pt-6 shadow-xl">
+<header class="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+<div class="flex items-center justify-between">
+<img src="../images/code_club_logo.jpg" alt="Code Club Logo" class="h-20 w-20 rounded-full border-2 border-black object-cover shadow-md">
+<button type="button" class="inline-flex items-center justify-center rounded-md border border-black bg-white p-2 text-sm font-semibold shadow hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 lg:hidden" aria-controls="primary-navigation" aria-expanded="false" data-menu-toggle>
+<span class="sr-only">Toggle navigation</span>
+<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+</svg>
+</button>
+</div>
+<nav id="primary-navigation" data-menu class="hidden flex-col gap-3 rounded-2xl border border-black bg-white px-4 py-4 text-sm font-semibold shadow md:flex md:flex-row md:items-center md:justify-end md:gap-4 md:border-none md:bg-transparent md:px-0 md:py-0 md:shadow-none lg:w-52 lg:flex-col lg:items-stretch lg:gap-3">
+<a href="index.html" class="rounded-md border border-black bg-white px-4 py-2 text-sm font-semibold shadow hover:bg-gray-100 lg:w-full lg:text-left">Home</a>
+<a href="Scratch.html" class="rounded-md border border-black bg-white px-4 py-2 text-sm font-semibold shadow hover:bg-gray-100 lg:w-full lg:text-left">Scratch</a>
+<a href="Python.html" class="rounded-md border border-black bg-white px-4 py-2 text-sm font-semibold shadow hover:bg-gray-100 lg:w-full lg:text-left">Python</a>
+<a href="Web.html" aria-current="page" class="rounded-md border border-black bg-amber-200 px-4 py-2 text-sm font-semibold shadow hover:bg-amber-100 lg:w-full lg:text-left">Web</a>
+</nav>
+</header>
+<main class="mt-6">
+<section class="rounded-[2.5rem] border-4 border-black bg-cyan-200 px-8 py-10 text-left shadow-lg">
+<h1 class="text-3xl font-bold text-gray-900 md:text-4xl">Web Design</h1>
+<p class="mt-4 text-lg leading-relaxed text-gray-800">
+Begin your adventure in digital making by learning to code animations, stories, and games in Scratch.
+</p>
+</section>
+<div class="mt-10 grid items-stretch gap-8 md:grid-cols-2 lg:grid-cols-3">
+<article class="flex h-full flex-col rounded-[2.5rem] bg-orange-300 p-6 pb-8 text-left shadow-lg">
+<img src="../images/web-intro.webp" alt="Introduction to Web" class="h-48 w-full rounded-3xl object-cover shadow-md">
+<h2 class="mt-6 text-2xl font-semibold text-gray-900">Introduction to Web</h2>
+<h3 class="mt-2 text-lg font-semibold text-gray-900">HTML, CSS, and animations</h3>
+<p class="mt-3 text-base leading-relaxed text-gray-800">
+In this introduction to Web Design for beginners, you will learn how to add structure and style to webpages
+with images, lists, fonts, quotes, links, and animation.
+</p>
+</article>
+<article class="flex h-full flex-col rounded-[2.5rem] bg-sky-200 p-6 pb-8 text-left shadow-lg">
+<img src="../images/more-web.webp" alt="More Web" class="h-48 w-full rounded-3xl object-cover shadow-md">
+<h2 class="mt-6 text-2xl font-semibold text-gray-900">More Web</h2>
+<h3 class="mt-2 text-lg font-semibold text-gray-900">HTML, CSS, and JavaScript</h3>
+<p class="mt-3 text-base leading-relaxed text-gray-800">
+More Web moves beyond the basics introduced in Introduction to Web. Modern web design transforms static
+pages into engaging experiences using JavaScript interactions and thoughtful layout.
+</p>
+</article>
+<article class="flex h-full flex-col rounded-[2.5rem] bg-lime-300 p-6 pb-8 text-left shadow-lg">
+<img src="../images/web.png" alt="Advanced web projects" class="h-48 w-full rounded-3xl object-cover shadow-md">
+<h2 class="mt-6 text-2xl font-semibold text-gray-900">Advanced Web</h2>
+<h3 class="mt-2 text-lg font-semibold text-gray-900">User experience and deployment</h3>
+<p class="mt-3 text-base leading-relaxed text-gray-800">
+Bring your websites to life with responsive layouts, interactive components, and accessibility best practices.
+Learn how to deploy your projects and share them with the world.
+</p>
+</article>
+</div>
+</main>
+<footer class="mt-10 text-left text-sm italic text-gray-800">
+Dublin Road, Dundalk
+</footer>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+const toggle = document.querySelector('[data-menu-toggle]');
+const menu = document.querySelector('[data-menu]');
+if (!toggle || !menu) {
+return;
+}
+
+const syncMenuToViewport = () => {
+if (window.matchMedia('(min-width: 768px)').matches) {
+menu.classList.remove('hidden');
+menu.classList.remove('flex');
+toggle.setAttribute('aria-expanded', 'true');
+} else {
+menu.classList.add('hidden');
+menu.classList.remove('flex');
+toggle.setAttribute('aria-expanded', 'false');
+}
+};
+
+toggle.addEventListener('click', () => {
+menu.classList.toggle('hidden');
+const isHidden = menu.classList.contains('hidden');
+menu.classList.toggle('flex', !isHidden);
+toggle.setAttribute('aria-expanded', (!isHidden).toString());
+});
+
+window.addEventListener('resize', syncMenuToViewport);
+syncMenuToViewport();
+});
+</script>
+</body>
+</html>
