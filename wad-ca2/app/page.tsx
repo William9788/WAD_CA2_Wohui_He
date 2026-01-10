@@ -4,6 +4,12 @@ export default function Home(){
       <h1 className="text-2xl font-bold">
         Learn to code with Code Club
       </h1>
+      <p className="mt-4 text-lg leading-relaxed">
+        Our projects have step-by-step instructions to teach you how to create games,animations,and much more.
+      </p>
+      <p className="mt-2 text-lg leading-relaxed">
+        choose from hundreds of options, in up to 30 languages.
+      </p>
     </main>
-  )
+  );
 }
