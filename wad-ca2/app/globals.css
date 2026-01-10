@@ -1,6 +1,1 @@
-@tailwind basse;
-@tailwind components;
-@tailwind utilities;
-body{
-  @apply min-h-screen bg-cyan-300 py-8 font-sans;
-}
+@import "tailwindcss";
