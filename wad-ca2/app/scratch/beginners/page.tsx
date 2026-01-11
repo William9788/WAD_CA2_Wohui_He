@@ -1,3 +1,4 @@
 export default function ScratchBeginners(){
-    return <h1>Scratch Beginners</h1>;
+    return <main><h1>Scratch Beginners</h1>;
+    </main>
 }

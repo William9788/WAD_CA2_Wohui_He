@@ -1,3 +1,4 @@
-export default function ScratchBeginners(){
-    return <h1>Python Beginners</h1>;
+export default function PythonBeginners(){
+    return <main><h1>Python Beginners</h1>;
+    </main>
 }
