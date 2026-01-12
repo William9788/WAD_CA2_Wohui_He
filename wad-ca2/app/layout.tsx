@@ -26,6 +26,9 @@ export default function RootLayout({
                 <Navlink href="web" label="Web"/>
                 </nav>
                 {children}
+                <footer className="mt-10 text-center text-sm italic text-gray-700">
+                Dublin Road, Dundalk
+</footer>
             </body>
         </html>
     );
