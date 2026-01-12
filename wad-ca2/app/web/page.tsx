@@ -43,7 +43,7 @@ export default function Web(){
                     alt={project.title}
                     width={400}
                     height={300}
-                     className="h-40 w-full rounded-3xl object-cover shadow-md"
+                    className="h-40 w-full rounded-3xl object-cover shadow-md"
                     />
                     <h2 className="mt-6 text-2xl font-semibold text-gray-900">
                         {project.title}
