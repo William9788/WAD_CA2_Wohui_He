@@ -18,7 +18,7 @@ export default function RootLayout({
                 width={80}
                 height={10}
                 className="rounded-lg fixed top-4 left-4 z-50"
-                />
+                />  
                 <nav className="mb-2 ml-25 rounded-lg border-2 border-blue-500 bg-white p-2 font-semibold shadow flex justify-between">
                 <Navlink href="/" label="Home"/>
                 <Navlink href="/scratch" label="Scratch"/>
