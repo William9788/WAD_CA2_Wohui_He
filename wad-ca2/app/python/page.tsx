@@ -36,7 +36,7 @@ export default function Python(){
             <div className="mt-10 grid items-stretch gap-8 md:grid-cols-2 lg:grid-cols-3">
                 {pythonproject.map((project)=>(
                     <article 
-                    key={project.title} 
+                    key={project.title}
                     className={`flex h-full flex-col rounded-[2.5rem] p-6 pb-8 text-left shadow-lg ${project.bg}`}>
                     <Image
                     src={project.image}
