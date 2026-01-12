@@ -1,21 +1,25 @@
+import Image from "next/image";
 const webproject = [
     {
     title:"Introduction to Web",
     subtitle:"HTML,CSS and animation",
     description:"Inthis introduction to Web Design for beginner you will need to learn on how to add structure and style in it.",
     bg:"bg-orange-300",
+    image:"/images/web-intro.webp",
     },
     {
     title:"More Web",
     subtitle:"HTML CSS and Javascript",
     description:"More Web move beyond the basic introduce in Introduction to Web.Web Design transforms static pages using JavaScript.",
     bg:"bg-sky-200",
+    image:"/images/more-web.webp",
     },
     {
     title:"Advanced Web",
     subtitle:"User experience , deployment",
     description:"Bring the website to life with the responsive layout.",
     bg:"bg-lime-300",
+    image:"/images/web.png",
     },
 ];
 export default function Web(){
@@ -31,8 +35,16 @@ export default function Web(){
             </section>
             <div className="mt-10 grid items-stretch gap-8 md:grid-cols-2 lg:grid-cols-3">
                 {webproject.map((project)=>(
-                    <article key={project.title}
+                    <article 
+                    key={project.title}
                     className={`flex h-full flex-col rounded-[2.5rem] p-6 pb-8 text-left shadow-lg ${project.bg}`}>
+                    <Image
+                    src={project.image}
+                    alt={project.title}
+                    width={400}
+                    height={300}
+                     className="h-40 w-full rounded-3xl object-cover shadow-md"
+                    />
                     <h2 className="mt-6 text-2xl font-semibold text-gray-900">
                         {project.title}
                     </h2>
