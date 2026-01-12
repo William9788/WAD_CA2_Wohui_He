@@ -1,5 +1,6 @@
 "use client";
 import"./globals.css";
+import Image from"next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 export default function RootLayout({
@@ -8,9 +9,17 @@ export default function RootLayout({
     children:React.ReactNode;
 }){
     return (
+        
         <html lang="en">
             <body className="min-h-screen bg-cyan-300 py-8 font-sans">
-                <nav className="mb-8 gap-4 rounded-lg border-2 border-green bg-white p-4 font-semibold shadow flex">
+                <Image
+                src="/images/code_club_logo.jpg"
+                alt="codeclub logo"
+                width={80}
+                height={10}
+                className="rounded-lg fixed"
+                />
+                <nav className="mb-2 rounded-lg border-2 border-blue bg-white p-2 font-semibold shadow flex justify-between">
                 <Navlink href="/" label="Home"/>
                 <Navlink href="scratch" label="Scratch"/>
                 <Navlink href="python" label="Python"/>
