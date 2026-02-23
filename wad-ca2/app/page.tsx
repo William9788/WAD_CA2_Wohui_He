@@ -10,7 +10,7 @@ export default async function Home() {
     Learn to code with Code Club
     </h1>
     <div className="mt-10 grid items-stretch gap-8 md:grid-cols-2 lg:grid-cols-3">
-    {technologies.map((tech) => (
+    {technologies.map((tech:any) => (
     <Link key={tech.id} href={`/${tech.slug}`} className="block">
     <article className={`flex h-full flex-col rounded-[2.5rem] ${tech.bg_color} p-6 pb-8 text-left shadow-lg transition hover:scale-[1.02] hover:shadow-xl`}>
     <Image src={tech.image_url}
