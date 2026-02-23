@@ -32,7 +32,7 @@ export default async function TechPage({
     </p>
     </section>
     <div className="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-    {projects.map((project) => (
+    {projects.map((project:any) => (
     <article key={project.id} className={`flex flex-col rounded-[2.5rem] p-6 shadow-lg ${project.bg_color}`}>
     <Image
             src={project.image_url}
